@@ -1,44 +1,47 @@
 
-let pocetIndianu = 0;
-let skupinaIndianu;
-let pisnicka = " ";
+let pocetIndianu = 0;  // 2 ( = početIndianu) llittle
+let skupinaIndianu; // skupinaIndianu např.: (2 little)
+let pisnicka = " ";  
+
+/* poradiSkupinyIndianu = kolikatá je ta skupina v textu pisníčky, 
+celkém jich mám 20, protože 0.nezobrazuju*/
 
 for (let poradiSkupinyIndianu = 0; poradiSkupinyIndianu < 21; poradiSkupinyIndianu ++) {
 
     if (poradiSkupinyIndianu === 10) {
         pocetIndianu ++;
-        skupinaIndianu = pocetIndianu + " little indian boys\n\n";
+        skupinaIndianu = pocetIndianu + " little indian boys.\n\n";
         pisnicka += skupinaIndianu + " ";
      
     } else if (poradiSkupinyIndianu < 11 && poradiSkupinyIndianu % 3 === 0 && poradiSkupinyIndianu !== 0)  {
         pocetIndianu++;
-        skupinaIndianu = pocetIndianu + " little indians\n";
+        skupinaIndianu = pocetIndianu + " little indians,\n";
         pisnicka += skupinaIndianu + " ";
 
     } else if  (poradiSkupinyIndianu < 11 && poradiSkupinyIndianu % 3 !== 0) {
         pocetIndianu ++;
-        skupinaIndianu = pocetIndianu + " little";
+        skupinaIndianu = pocetIndianu + " little,";
         pisnicka += skupinaIndianu + " ";
 
 
     } else if (poradiSkupinyIndianu === 11) {
-        skupinaIndianu = pocetIndianu + " " + "little";
+        skupinaIndianu = pocetIndianu + " " + "little,";
         pisnicka += skupinaIndianu + " ";
         
     } else if (poradiSkupinyIndianu === 20) {
         pocetIndianu --
-        skupinaIndianu = pocetIndianu + " little indian boy";
+        skupinaIndianu = pocetIndianu + " little indian boy.";
         pisnicka += skupinaIndianu + " ";
         
 
     } else if (poradiSkupinyIndianu > 11 && poradiSkupinyIndianu % 3 === 1)  {
         pocetIndianu--;
-        skupinaIndianu = pocetIndianu + " little indians\n";
+        skupinaIndianu = pocetIndianu + " little indians,\n";
         pisnicka += skupinaIndianu + " ";
         
     } else if  (poradiSkupinyIndianu > 11 && poradiSkupinyIndianu % 3 !== 1) {
         pocetIndianu --;
-        skupinaIndianu = pocetIndianu + " little";
+        skupinaIndianu = pocetIndianu + " little,";
         pisnicka += skupinaIndianu + " ";
     }
  
