@@ -12,7 +12,7 @@ One little Indian boy.[1]
 let pocet1Vers = 0;
 let pocet2Vers = 11
 let text;
-let indiani1Vers = " "
+let indiani1Vers = " " 
 let indiani2Vers = " "
 
 
@@ -24,7 +24,7 @@ for (let i = 1; i < 11; i++) {
     if (i % 3 !== 0) {
 
         if (i === 10) {
-            text = " little indian boys\n"
+            text = " little indian boy"
 
         } else {
             text = " little, "
@@ -40,4 +40,4 @@ for (let i = 1; i < 11; i++) {
 }
 
 
-console.log(indiani1Vers + "\n" + indiani2Vers);
+console.log(indiani1Vers + "s.\n\n" + indiani2Vers + ".");
