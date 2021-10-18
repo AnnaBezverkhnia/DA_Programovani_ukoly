@@ -1,52 +1,43 @@
+/*One little, two little, three little Indians
+Four little, five little, six little Indians
+Seven little, eight little, nine little Indians
+Ten little Indian boys.
 
-let pocetIndianu = 0;  // 2 ( = početIndianu) llittle
-let skupinaIndianu; // skupinaIndianu např.: (2 little)
-let pisnicka = " ";  
+Ten little, nine little, eight little Indians
+Seven little, six little, five little Indians
+Four little, three little, two little Indians
+One little Indian boy.[1]
+*/
 
-/* poradiSkupinyIndianu = kolikatá je ta skupina v textu pisníčky, 
-celkém jich mám 20, protože 0.nezobrazuju*/
-
-for (let poradiSkupinyIndianu = 0; poradiSkupinyIndianu < 21; poradiSkupinyIndianu ++) {
-
-    if (poradiSkupinyIndianu === 10) {
-        pocetIndianu ++;
-        skupinaIndianu = pocetIndianu + " little indian boys.\n\n";
-        pisnicka += skupinaIndianu + " ";
-     
-    } else if (poradiSkupinyIndianu < 11 && poradiSkupinyIndianu % 3 === 0 && poradiSkupinyIndianu !== 0)  {
-        pocetIndianu++;
-        skupinaIndianu = pocetIndianu + " little indians,\n";
-        pisnicka += skupinaIndianu + " ";
-
-    } else if  (poradiSkupinyIndianu < 11 && poradiSkupinyIndianu % 3 !== 0) {
-        pocetIndianu ++;
-        skupinaIndianu = pocetIndianu + " little,";
-        pisnicka += skupinaIndianu + " ";
+let pocet1Vers = 0;
+let pocet2Vers = 11
+let text;
+let indiani1Vers = " "
+let indiani2Vers = " "
 
 
-    } else if (poradiSkupinyIndianu === 11) {
-        skupinaIndianu = pocetIndianu + " " + "little,";
-        pisnicka += skupinaIndianu + " ";
-        
-    } else if (poradiSkupinyIndianu === 20) {
-        pocetIndianu --
-        skupinaIndianu = pocetIndianu + " little indian boy.";
-        pisnicka += skupinaIndianu + " ";
-        
 
-    } else if (poradiSkupinyIndianu > 11 && poradiSkupinyIndianu % 3 === 1)  {
-        pocetIndianu--;
-        skupinaIndianu = pocetIndianu + " little indians,\n";
-        pisnicka += skupinaIndianu + " ";
-        
-    } else if  (poradiSkupinyIndianu > 11 && poradiSkupinyIndianu % 3 !== 1) {
-        pocetIndianu --;
-        skupinaIndianu = pocetIndianu + " little,";
-        pisnicka += skupinaIndianu + " ";
+for (let i = 1; i < 11; i++) {
+
+    pocet1Vers++
+    pocet2Vers--
+    if (i % 3 !== 0) {
+
+        if (i === 10) {
+            text = " little indian boys\n"
+
+        } else {
+            text = " little, "
+
+        }
+    } else {
+        text = " little indians\n "
     }
- 
+
+    indiani1Vers += pocet1Vers + text;
+    indiani2Vers += pocet2Vers + text;
 
 }
 
-console.log(pisnicka)
 
+console.log(indiani1Vers + "\n" + indiani2Vers);
